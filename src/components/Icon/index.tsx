@@ -1,5 +1,4 @@
 import Svg from 'react-native-vector-icons/Ionicons'
-
 import React from 'react';
 import { ColorValue } from 'react-native';
 

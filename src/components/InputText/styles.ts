@@ -17,8 +17,11 @@ export const Input = styled.TextInput`
 export const InputContainer = styled.KeyboardAvoidingView`
     width: 100%;
     max-width: 350;
+    flex-direction: row;
     border: 1px #DDDDDD solid;
     padding-block:10;
     padding-inline:20;
     border-radius: 10;
+    gap: 20;
+
 `
