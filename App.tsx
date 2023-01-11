@@ -1,27 +1,32 @@
+//imports
 import React from 'react';
-import { Text, View } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import {
   useFonts,
-  Inter_900Black,
+  Inter_800ExtraBold,
+  Inter_400Regular,
+  Inter_700Bold,
+  Inter_300Light,
 } from '@expo-google-fonts/inter';
+import { TextExample } from './src/screens/TextExample';
+import { FormExample } from './src/screens/FormExample';
 
+//main function
 export default () => {
+  //fonts
   let [fontsLoaded] = useFonts({
-    Inter_900Black,
+    Inter_800ExtraBold,
+    Inter_400Regular,
+    Inter_700Bold,
+    Inter_300Light
   });
 
+  //load fonts
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-
-        <Text style={{ fontFamily: 'Inter_900Black' }}>
-          Inter Black
-        </Text>
-
-      </View>
+      <FormExample></FormExample>
     );
   }
 };
