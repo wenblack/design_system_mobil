@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export const Input = styled.TextInput`
   width: 100%;
@@ -6,22 +6,21 @@ export const Input = styled.TextInput`
   outline: none;
   outline-color: transparent;
   background: transparent;
-  font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
-  font-size: 15;
-  color: rgb(37,41,46);
+  font-weight: 400px;
+  font-size: 15px;
+  color: rgb(37, 41, 46);
   text-align: justify;
+  margin-left: 10px;
 `;
 
-export const InputContainer = styled.KeyboardAvoidingView`
-    width: 100%;
-    max-width: 350;
-    flex-direction: row;
-    border: 1px #DDDDDD solid;
-    padding-block:10;
-    padding-inline:20;
-    border-radius: 10;
-    gap: 20;
-
-`
+export const InputContainer = styled.View`
+  display: flex;
+  width: 100%;
+  max-width: 350px;
+  flex-direction: row;
+  border: 1px #dddddd solid;
+  padding: 10px 20px;
+  border-radius: 10px;
+  gap: 20px;
+`;
