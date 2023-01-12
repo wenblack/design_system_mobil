@@ -4,6 +4,7 @@ export const Container = styled.SafeAreaView`
   flex: 1;
   margin-left: 10%;
   margin-right: 10%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
+  margin: 0 auto;
 `;
