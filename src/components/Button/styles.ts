@@ -1,26 +1,16 @@
 import styled from "styled-components/native";
 
-export const Touchable = styled.TouchableOpacity`
-  width: 100%;
-  border: none;
-  outline: none;
-  outline-color: transparent;
-  background: transparent;
-  font-style: normal;
-  font-weight: 400px;
-  font-size: 15px;
-  color: rgb(37, 41, 46);
-  text-align: justify;
-  margin-left: 10px;
-`;
-
-export const ButtonContainer = styled.View`
+export const ButtonContainer = styled.TouchableOpacity`
   display: flex;
+  align-items: center;
+  text-align: center;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
+  justify-content: center;
   flex-direction: row;
-  border: 1px #dddddd solid;
+  border: none;
   padding: 10px 20px;
   border-radius: 10px;
-  gap: 20px;
+  background: darkorange;
+  transition-duration:1s;
 `;

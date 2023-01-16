@@ -5,9 +5,10 @@ import { Input, InputContainer } from "./styles";
 interface inputProps {
   type: "text" | "password" | "pin";
   placeholder: string;
+  label?: string
 }
 
-export function InputText({ type, placeholder }: inputProps) {
+export function InputText({ type, placeholder, label }: inputProps) {
   if (type == "text") {
     return (
       <InputContainer>
@@ -45,6 +46,19 @@ export function InputText({ type, placeholder }: inputProps) {
           keyboardType="numeric"
           secureTextEntry={true}
           keyboardAppearance="dark"
+        />
+      </InputContainer>
+    );
+  } else {
+    return (
+      <InputContainer>
+        <Icon name={"mail"} size={18} color={"gray"}></Icon>
+        <Input
+          placeholderTextColor={"gray"}
+          placeholder={'Input padrão'}
+          keyboardType="email-address"
+          autoComplete="email"
+          secureTextEntry={false}
         />
       </InputContainer>
     );

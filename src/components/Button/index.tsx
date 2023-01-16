@@ -1,34 +1,44 @@
 import React from "react";
 import { Icon } from "../Icon";
-import { Touchable, ButtonContainer } from "./styles";
+import { SubTitle } from "../SubTitle";
+import { ButtonContainer } from "./styles";
 
 interface ButtonProps {
-  type: 'send' | 'search' | 'none';
+  type?: 'default' | 'sucess' | 'cancel';
   placeholder: string;
+  label: string
 }
 
-export function Button({ type, placeholder }: ButtonProps) {
-  if (type == 'send') {
+export function Button({ type, placeholder, label }: ButtonProps) {
+
+
+
+  if (type == 'default') {
     return (
-      <ButtonContainer>
-        <Icon name={"send"} size={18} color={"gray"}></Icon>
-        <Touchable>{placeholder}</Touchable>
-      </ButtonContainer>
+      <ButtonContainer accessibilityLabel={label}>
+        <SubTitle style={{ color: 'white' }} content={placeholder} />
+      </ButtonContainer >
     );
   }
-  if (type == 'search') {
+  if (type == 'sucess') {
     return (
-      <ButtonContainer>
-        <Icon name={"search"} size={18} color={"gray"}></Icon>
-        <Touchable>{placeholder}</Touchable>
-      </ButtonContainer>
+      <ButtonContainer accessibilityLabel={label} style={{ backgroundColor: 'green' }}>
+        <SubTitle style={{ color: 'white' }} content={placeholder} />
+      </ButtonContainer >
     );
   }
-  if (type == 'none') {
+  if (type == 'cancel') {
     return (
-      <ButtonContainer>
-        <Touchable>{placeholder}</Touchable>
-      </ButtonContainer>
+      <ButtonContainer accessibilityLabel={label} style={{ backgroundColor: 'red' }}>
+        <SubTitle style={{ color: 'white' }} content={placeholder} />
+      </ButtonContainer >
+    );
+  }
+  else {
+    return (
+      <ButtonContainer accessibilityLabel={label}>
+        <SubTitle content={placeholder} />
+      </ButtonContainer >
     );
   }
 }

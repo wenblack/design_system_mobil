@@ -17,7 +17,7 @@ export const Input = styled.TextInput`
 export const InputContainer = styled.View`
   display: flex;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   flex-direction: row;
   border: 1px #dddddd solid;
   padding: 10px 20px;
