@@ -3,7 +3,7 @@ import { InputText } from "../../components/InputText";
 import { SubTitle } from "../../components/SubTitle";
 import { Container } from "./styles";
 import { Title } from "../../components/Title";
-
+import { Button } from "../../components/Button";
 export function FormExample() {
   return (
     <Container>
@@ -14,6 +14,7 @@ export function FormExample() {
       <InputText type="password" placeholder="Digite seu e-mail"></InputText>
       <SubTitle content="Pin"></SubTitle>
       <InputText type="pin" placeholder="Digite seu código"></InputText>
+      <Button placeholder='Enviar' type="search" />
     </Container>
   );
 }
