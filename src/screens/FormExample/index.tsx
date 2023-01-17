@@ -8,9 +8,11 @@ import { ScrollView, StatusBar, StyleProp, ViewStyle } from 'react-native'
 
 interface styleProps {
 	style?: StyleProp<ViewStyle>
-	font: string
+	fontTitle: string
+	fontSubtitle: string
+	fontButton: string
 }
-export function FormExample({ style, font }: styleProps) {
+export function FormExample({ style, fontButton, fontSubtitle, fontTitle }: styleProps) {
 	return (
 		<Container style={style}>
 			<StatusBar
@@ -18,45 +20,45 @@ export function FormExample({ style, font }: styleProps) {
 				translucent
 			></StatusBar>
 			<ScrollView>
-				<Title content='Cadastro'></Title>
-				<SubTitle content='Email/Texto'></SubTitle>
+				<Title fontTitle={fontTitle} content='Cadastro'></Title>
+				<SubTitle fontSubtitle={fontSubtitle} content='Email/Texto'></SubTitle>
 				<InputText
 					type='text'
 					placeholder='Digite seu e-mail'
-					fontstyle={font}
+					inputFont={fontSubtitle}
 				></InputText>
-				<SubTitle content='Senha'></SubTitle>
+				<SubTitle fontSubtitle={fontSubtitle} content='Senha'></SubTitle>
 				<InputText
 					type='password'
 					placeholder='Digite seu e-mail'
-					fontstyle={font}
+					inputFont={fontSubtitle}
 				></InputText>
-				<SubTitle content='Pin'></SubTitle>
+				<SubTitle fontSubtitle={fontSubtitle} content='Pin'></SubTitle>
 				<InputText
 					type='pin'
 					placeholder='Digite seu código'
-					fontstyle={font}
+					inputFont={fontSubtitle}
 				></InputText>
-				<SubTitle content='Botão Default'></SubTitle>
+				<SubTitle fontSubtitle={fontSubtitle} content='Botão Default'></SubTitle>
 				<Button
 					label='default button'
 					placeholder='Procurar'
 					type='default'
-					fontStyle={font}
+					fontButton={fontButton}
 				></Button>
-				<SubTitle content='Botão de Enviar'></SubTitle>
+				<SubTitle fontSubtitle={fontSubtitle} content='Botão de Enviar'></SubTitle>
 				<Button
 					label='green button'
 					placeholder='Enviar'
 					type='sucess'
-					fontStyle={font}
+					fontButton={fontButton}
 				></Button>
-				<SubTitle content='Botão de Cancelar'></SubTitle>
+				<SubTitle fontSubtitle={fontSubtitle} content='Botão de Cancelar'></SubTitle>
 				<Button
 					label='cancel button'
 					placeholder='Cancelar'
 					type='cancel'
-					fontStyle={font}
+					fontButton={fontButton}
 				></Button>
 			</ScrollView>
 		</Container>

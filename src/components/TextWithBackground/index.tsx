@@ -1,17 +1,22 @@
 import React from 'react';
-import { TextStyle } from 'react-native';
-import { StyledProps } from 'styled-components';
+import { ColorValue } from 'react-native';
 import { Text } from './styles';
 
 interface TextWithBackgroundProps {
     content: string,
-    style?: StyledProps<TextStyle>
+    color?: ColorValue
+    fontText: string
+    background: ColorValue
 }
 
-export function TextWithBackground({ content, style }: TextWithBackgroundProps) {
+export function TextWithBackground({ content, fontText, color, background }: TextWithBackgroundProps) {
     return (
         <Text
-            style={style}
+            style={{
+                color: color,
+                fontFamily: fontText,
+                backgroundColor: background
+            }}
         >{content}</Text>
     );
 }

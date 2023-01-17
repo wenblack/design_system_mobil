@@ -1,17 +1,20 @@
 import React from 'react'
+import { ColorValue } from 'react-native'
 
 import { Text } from './styles'
 
 interface SimpleTextProps {
 	content: string
-	fontstyle: string
+	textFont: string
+	color?: ColorValue
 }
 
-export function SimpleText({ content, fontstyle }: SimpleTextProps) {
+export function SimpleText({ content, textFont, color }: SimpleTextProps) {
 	return (
 		<Text
 			style={{
-				fontFamily: fontstyle
+				fontFamily: textFont,
+				color: color
 			}}
 		>
 			{content}

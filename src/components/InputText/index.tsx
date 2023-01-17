@@ -6,10 +6,10 @@ interface inputProps {
 	type: 'text' | 'password' | 'pin'
 	placeholder: string
 	label?: string
-	fontstyle: string
+	inputFont: string
 }
 
-export function InputText({ type, placeholder, label, fontstyle }: inputProps) {
+export function InputText({ type, placeholder, label, inputFont }: inputProps) {
 	if (type == 'text') {
 		return (
 			<InputContainer>
@@ -21,7 +21,7 @@ export function InputText({ type, placeholder, label, fontstyle }: inputProps) {
 				<Input
 					placeholderTextColor={'gray'}
 					style={{
-						fontFamily: fontstyle
+						fontFamily: inputFont
 					}}
 					placeholder={placeholder}
 					keyboardType='email-address'
@@ -42,7 +42,7 @@ export function InputText({ type, placeholder, label, fontstyle }: inputProps) {
 				<Input
 					placeholderTextColor={'gray'}
 					style={{
-						fontFamily: fontstyle
+						fontFamily: inputFont
 					}}
 					placeholder={placeholder}
 					keyboardType='email-address'
@@ -63,7 +63,7 @@ export function InputText({ type, placeholder, label, fontstyle }: inputProps) {
 					placeholderTextColor={'gray'}
 					placeholder={placeholder}
 					style={{
-						fontFamily: fontstyle
+						fontFamily: inputFont
 					}}
 					keyboardType='numeric'
 					secureTextEntry={true}
@@ -83,7 +83,7 @@ export function InputText({ type, placeholder, label, fontstyle }: inputProps) {
 					placeholderTextColor={'gray'}
 					placeholder={'Input padrão'}
 					style={{
-						fontFamily: fontstyle
+						fontFamily: inputFont
 					}}
 					keyboardType='email-address'
 					autoComplete='email'

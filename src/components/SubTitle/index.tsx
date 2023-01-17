@@ -1,12 +1,17 @@
 import React from 'react'
-import { StyleProp, TextStyle } from 'react-native'
+import { ColorValue, StyleProp, TextStyle } from 'react-native'
 import { H2 } from './styles'
 
 interface SubTitleProps {
 	content: string
-	style?: StyleProp<TextStyle>
+	fontSubtitle: string
+	color?: ColorValue
 }
 
-export function SubTitle({ content, style }: SubTitleProps) {
-	return <H2 style={style}>{content}</H2>
+export function SubTitle({ content, fontSubtitle, color }: SubTitleProps) {
+	return <H2
+		style={{
+			fontFamily: fontSubtitle,
+			color: color
+		}}>{content}</H2>
 }
