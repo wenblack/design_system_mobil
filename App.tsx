@@ -24,9 +24,10 @@ export default function App() {
 	}
 	return (
 		<FormExample
-			fontButton='Inter_400Regular'
+			fontButton='Inter_700Bold'
 			fontSubtitle='Inter_700Bold'
 			fontTitle='Inter_800ExtraBold'
+			fontInput='Inter_400Regular'
 		></FormExample>
 	)
 }

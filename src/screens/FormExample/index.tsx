@@ -11,8 +11,9 @@ interface styleProps {
 	fontTitle: string
 	fontSubtitle: string
 	fontButton: string
+	fontInput: string
 }
-export function FormExample({ style, fontButton, fontSubtitle, fontTitle }: styleProps) {
+export function FormExample({ style, fontButton, fontSubtitle, fontTitle, fontInput }: styleProps) {
 	return (
 		<Container style={style}>
 			<StatusBar
@@ -25,19 +26,19 @@ export function FormExample({ style, fontButton, fontSubtitle, fontTitle }: styl
 				<InputText
 					type='text'
 					placeholder='Digite seu e-mail'
-					inputFont={fontSubtitle}
+					inputFont={fontInput}
 				></InputText>
 				<SubTitle fontSubtitle={fontSubtitle} content='Senha'></SubTitle>
 				<InputText
 					type='password'
 					placeholder='Digite seu e-mail'
-					inputFont={fontSubtitle}
+					inputFont={fontInput}
 				></InputText>
 				<SubTitle fontSubtitle={fontSubtitle} content='Pin'></SubTitle>
 				<InputText
 					type='pin'
 					placeholder='Digite seu código'
-					inputFont={fontSubtitle}
+					inputFont={fontInput}
 				></InputText>
 				<SubTitle fontSubtitle={fontSubtitle} content='Botão Default'></SubTitle>
 				<Button
