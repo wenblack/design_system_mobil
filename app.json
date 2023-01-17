@@ -6,6 +6,8 @@
     "orientation": "portrait",
     "icon": "src/assets/icon.png",
     "userInterfaceStyle": "light",
+    "title": "Desing System Mobile",
+    "description": "This is initial template of my firt design System of a mobile App",
     "splash": {
       "image": "src/assets/splash.png",
       "resizeMode": "contain",
@@ -18,7 +20,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.wikibeer.wenblack"
     },
     "android": {
       "adaptiveIcon": {

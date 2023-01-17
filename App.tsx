@@ -10,7 +10,7 @@ import {
 import { Loading } from './src/components/Loading'
 import { TextExample } from './src/screens/TextExample'
 import { FormExample } from './src/screens/FormExample'
-import { StyleSheet, View } from 'react-native'
+import { StatusBar } from 'react-native'
 //main function
 export default function App() {
 	let [fontsLoaded] = useFonts({
@@ -28,7 +28,7 @@ export default function App() {
 			fontSubtitle='Inter_700Bold'
 			fontTitle='Inter_800ExtraBold'
 			fontInput='Inter_400Regular'
-		></FormExample>
+		/>
 	)
 }
 

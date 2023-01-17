@@ -4,22 +4,17 @@ import { SubTitle } from '../../components/SubTitle'
 import { Container } from './styles'
 import { Title } from '../../components/Title'
 import { Button } from '../../components/Button'
-import { ScrollView, StatusBar, StyleProp, ViewStyle } from 'react-native'
+import { ScrollView } from 'react-native'
 
 interface styleProps {
-	style?: StyleProp<ViewStyle>
 	fontTitle: string
 	fontSubtitle: string
 	fontButton: string
 	fontInput: string
 }
-export function FormExample({ style, fontButton, fontSubtitle, fontTitle, fontInput }: styleProps) {
+export function FormExample({ fontButton, fontSubtitle, fontTitle, fontInput }: styleProps) {
 	return (
-		<Container style={style}>
-			<StatusBar
-				barStyle={'dark-content'}
-				translucent
-			></StatusBar>
+		<Container >
 			<ScrollView>
 				<Title fontTitle={fontTitle} content='Cadastro'></Title>
 				<SubTitle fontSubtitle={fontSubtitle} content='Email/Texto'></SubTitle>
