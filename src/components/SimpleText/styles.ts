@@ -8,3 +8,4 @@ export const Text = styled.Text`
   text-align: justify;
   max-width: 700px;
 `;
+

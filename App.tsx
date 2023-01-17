@@ -1,10 +1,25 @@
-import React from "react";
+import React from 'react'
 //imports
-import { TextExample } from "./src/screens/TextExample";
-import { FormExample } from "./src/screens/FormExample";
-import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
+import {
+	useFonts,
+	Inter_400Regular,
+	Inter_800ExtraBold,
+	Inter_700Bold,
+	Inter_900Black
+} from '@expo-google-fonts/inter'
+import { Loading } from './src/components/Loading'
+import { TextExample } from './src/screens/TextExample'
+import { FormExample } from './src/screens/FormExample'
+import { StyleSheet, View } from 'react-native'
 //main function
 export default function App() {
-  return <FormExample></FormExample>;
+	let [fontsLoaded] = useFonts({
+		Inter_400Regular,
+		Inter_800ExtraBold,
+		Inter_900Black
+	})
+	if (!fontsLoaded) {
+		return <Loading></Loading>
+	}
+	return <FormExample font='Inter_400Regular'></FormExample>
 }

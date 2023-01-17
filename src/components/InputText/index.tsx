@@ -1,66 +1,95 @@
-import React from "react";
-import { Icon } from "../Icon";
-import { Input, InputContainer } from "./styles";
+import React from 'react'
+import { Icon } from '../Icon'
+import { Input, InputContainer } from './styles'
 
 interface inputProps {
-  type: "text" | "password" | "pin";
-  placeholder: string;
-  label?: string
+	type: 'text' | 'password' | 'pin'
+	placeholder: string
+	label?: string
+	fontstyle: string
 }
 
-export function InputText({ type, placeholder, label }: inputProps) {
-  if (type == "text") {
-    return (
-      <InputContainer>
-        <Icon name={"mail"} size={18} color={"gray"}></Icon>
-        <Input
-          placeholderTextColor={"gray"}
-          placeholder={placeholder}
-          keyboardType="email-address"
-          autoComplete="email"
-          secureTextEntry={false}
-        />
-      </InputContainer>
-    );
-  }
-  if (type == "password") {
-    return (
-      <InputContainer>
-        <Icon name={"lock-closed"} size={18} color={"gray"}></Icon>
-        <Input
-          placeholderTextColor={"gray"}
-          placeholder={placeholder}
-          keyboardType="email-address"
-          secureTextEntry={true}
-        />
-      </InputContainer>
-    );
-  }
-  if (type == "pin") {
-    return (
-      <InputContainer>
-        <Icon name={"apps"} size={18} color={"gray"}></Icon>
-        <Input
-          placeholderTextColor={"gray"}
-          placeholder={placeholder}
-          keyboardType="numeric"
-          secureTextEntry={true}
-          keyboardAppearance="dark"
-        />
-      </InputContainer>
-    );
-  } else {
-    return (
-      <InputContainer>
-        <Icon name={"mail"} size={18} color={"gray"}></Icon>
-        <Input
-          placeholderTextColor={"gray"}
-          placeholder={'Input padrão'}
-          keyboardType="email-address"
-          autoComplete="email"
-          secureTextEntry={false}
-        />
-      </InputContainer>
-    );
-  }
+export function InputText({ type, placeholder, label, fontstyle }: inputProps) {
+	if (type == 'text') {
+		return (
+			<InputContainer>
+				<Icon
+					name={'mail'}
+					size={18}
+					color={'gray'}
+				></Icon>
+				<Input
+					placeholderTextColor={'gray'}
+					style={{
+						fontFamily: fontstyle
+					}}
+					placeholder={placeholder}
+					keyboardType='email-address'
+					autoComplete='email'
+					secureTextEntry={false}
+				/>
+			</InputContainer>
+		)
+	}
+	if (type == 'password') {
+		return (
+			<InputContainer>
+				<Icon
+					name={'lock-closed'}
+					size={18}
+					color={'gray'}
+				></Icon>
+				<Input
+					placeholderTextColor={'gray'}
+					style={{
+						fontFamily: fontstyle
+					}}
+					placeholder={placeholder}
+					keyboardType='email-address'
+					secureTextEntry={true}
+				/>
+			</InputContainer>
+		)
+	}
+	if (type == 'pin') {
+		return (
+			<InputContainer>
+				<Icon
+					name={'apps'}
+					size={18}
+					color={'gray'}
+				></Icon>
+				<Input
+					placeholderTextColor={'gray'}
+					placeholder={placeholder}
+					style={{
+						fontFamily: fontstyle
+					}}
+					keyboardType='numeric'
+					secureTextEntry={true}
+					keyboardAppearance='dark'
+				/>
+			</InputContainer>
+		)
+	} else {
+		return (
+			<InputContainer>
+				<Icon
+					name={'mail'}
+					size={18}
+					color={'gray'}
+				></Icon>
+				<Input
+					placeholderTextColor={'gray'}
+					placeholder={'Input padrão'}
+					style={{
+						fontFamily: fontstyle
+					}}
+					keyboardType='email-address'
+					autoComplete='email'
+					secureTextEntry={false}
+				/>
+			</InputContainer>
+		)
+	}
 }
