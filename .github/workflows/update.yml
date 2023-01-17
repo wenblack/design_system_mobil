@@ -47,4 +47,4 @@ jobs:
         run: eas update --auto
         
       - name: Build Android App
-         run:eas build -p android
+         run: eas build -p android
