@@ -22,16 +22,12 @@ export default function App() {
 	if (!fontsLoaded) {
 		return <Loading></Loading>
 	}
-	return <TextExample
-		fontSubtitle='Inter_700Bold'
-		fontTitle='Inter_800ExtraBold'
-		fontText='Inter_400Regular'
-	/>
+	return (
+		<FormExample
+			fontButton='Inter_400Regular'
+			fontSubtitle='Inter_700Bold'
+			fontTitle='Inter_800ExtraBold'
+		></FormExample>
+	)
 }
 
-
-/*<FormExample
-		fontButton='Inter_400Regular'
-		fontSubtitle='Inter_700Bold'
-		fontTitle='Inter_800ExtraBold'
-	></FormExample>*/
