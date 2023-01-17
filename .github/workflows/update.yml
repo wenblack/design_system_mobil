@@ -45,6 +45,3 @@ jobs:
 
       - name: Publish update
         run: eas update --auto
-
-     -  name: Build Android
-        run: eas build -p android   
