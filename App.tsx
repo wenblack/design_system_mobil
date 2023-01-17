@@ -14,21 +14,23 @@ import { StatusBar } from 'react-native'
 //main function
 export default function App() {
 	let [fontsLoaded] = useFonts({
-		Inter_400Regular,//normal
-		Inter_800ExtraBold,//title
-		Inter_700Bold,//subtitle
-		Inter_900Black//exta
+		Inter_400Regular, //normal
+		Inter_800ExtraBold, //title
+		Inter_700Bold, //subtitle
+		Inter_900Black //exta
 	})
 	if (!fontsLoaded) {
 		return <Loading></Loading>
 	}
 	return (
-		<FormExample
-			fontButton='Inter_700Bold'
-			fontSubtitle='Inter_700Bold'
-			fontTitle='Inter_800ExtraBold'
-			fontInput='Inter_400Regular'
-		/>
+		<>
+			<FormExample
+				fontButton='Inter_700Bold'
+				fontSubtitle='Inter_700Bold'
+				fontTitle='Inter_800ExtraBold'
+				fontInput='Inter_400Regular'
+			/>
+			<StatusBar barStyle={'dark-content'}></StatusBar>
+		</>
 	)
 }
-
