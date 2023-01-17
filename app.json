@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "src/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "br.com.wiki_beer.wenblack"
     },
     "web": {
       "favicon": "src/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5424a898-cae0-4c2a-8d4f-dfde33723624"
+      }
     }
   }
 }
